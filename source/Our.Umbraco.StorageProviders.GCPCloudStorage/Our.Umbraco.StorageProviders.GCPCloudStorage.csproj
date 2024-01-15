@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Umbraco Google Cloud Storage Provider</Title>
+    <Version>1.1.1</Version>
+    <Copyright>2022</Copyright>
+    <Description>An implementation of the Umbraco IFileSystem connecting your Umbraco Media section to an Google Cloud Storage bucket featuring middleware serving up media files from the `/media` path and ImageSharp image provider/cache.</Description>
+    <PackageTags>umbraco;gcp;cloud-storage;bucket;umbraco;umbraco10;umbraco-marketplace</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/JooVLC/Our.Umbraco.StorageProviders.GCPCloudStorage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JooVLC/Our.Umbraco.StorageProviders.GCPCloudStorage</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageIconUrl />
+    <PackageIcon>Logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\brand\Logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.2" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.9.53" />
+    <PackageReference Include="SixLabors.ImageSharp.Web.Providers.AWS" Version="2.0.2" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="10.0.0" />
+  </ItemGroup>
+
+</Project>
